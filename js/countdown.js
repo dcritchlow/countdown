@@ -9,7 +9,6 @@ function CountDownTimer(dateTime, divId) {
     var timer;
 
     function getDaysLeft(milliseconds) {
-      // console.log(Math.floor(new Date(milliseconds) / _day % 24) + ' days, ');
       return Math.floor(new Date(milliseconds) / _day % 24) + ' days, ';
     }
 

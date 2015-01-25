@@ -8,13 +8,12 @@ function countdown($seconds)
 {
     if( (time() + $seconds) > time() )
     {
-      echo $seconds-- . "\n";
+      echo $seconds-- . PHP_EOL;
       usleep(1000000);
       countdown($seconds);
-
     }
 }
 
 countdown(5);
 
-die('0 All done...');
+die('0 All done...'. PHP_EOL);

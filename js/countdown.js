@@ -1,7 +1,7 @@
 function CountDownTimer(dateTime, divId) {
 
     var end     = new Date(dateTime);
-    var test    = new Date();
+
     var _second = 1000;
     var _minute = _second * 60;
     var _hour   = _minute * 60;

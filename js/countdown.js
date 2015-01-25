@@ -9,11 +9,12 @@ function CountDownTimer(dateTime, divId) {
     var timer;
 
     function getDaysLeft(milliseconds) {
+      // console.log(Math.floor(new Date(milliseconds) / _day % 24) + ' days, ');
       return Math.floor(new Date(milliseconds) / _day % 24) + ' days, ';
     }
 
     function getHoursLeft(milliseconds) {
-      return Math.floor(new Date(milliseconds) / _hour % 60) + ' hrs, ';
+      return Math.floor(new Date(milliseconds) / _hour % 24) + ' hrs, ';
     }
 
     function getMinutesLeft(milliseconds) {
@@ -27,7 +28,7 @@ function CountDownTimer(dateTime, divId) {
     function showRemaining() {
 
        if ( Date.now() < end.getTime() ) {
-         document.getElementsByName('countDown')[0].value =
+          document.getElementsByName('countDown')[0].value =
           getDaysLeft(end.getTime() - Date.now()) +
           getHoursLeft(end.getTime() - Date.now()) +
           getMinutesLeft(end.getTime() - Date.now()) +
